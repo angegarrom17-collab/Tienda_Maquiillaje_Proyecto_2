@@ -22,7 +22,7 @@ class PruebasFacturas(TestCase):
           y una factura inicial en estado 'PENDIENTE'.
         """
         self.api = APIClient()
-        self.usuario = User.objects.create_superuser(username='tienda_belleza_user',password='Belleza2026!')
+        self.usuario = User.objects.create_superuser(username='tienda_belleza_user',password='ClavePrueba123!')
         self.api.force_authenticate(user=self.usuario)
         self.cliente = Cliente.objects.create(cedula='123456', nombre='Ana', email='ana@example.com')
         categoria = Categoria.objects.create(nombre='Sombras')

@@ -17,7 +17,7 @@ class PruebasClientes(TestCase):
         - Define un diccionario de datos base reutilizable en los tests.
         """
         self.api = APIClient()
-        self.usuario = User.objects.create_superuser(username='tienda_belleza_user',password='Belleza2026!')
+        self.usuario = User.objects.create_superuser(username='tienda_belleza_user',password='ClavePrueba123!')
         self.api.force_authenticate(user=self.usuario)
         self.datos = {'cedula': '123456789', 'nombre': 'Ana Solis', 'email': 'ana@example.com'}
 
